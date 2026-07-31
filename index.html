@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Zade | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">&gt; Rohit_Zade_</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">./home</a></li>
+            <li><a href="#about">./about</a></li>
+            <li><a href="#projects">./projects</a></li>
+            <li><a href="#contact">./contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="terminal-badge">[STATUS: AVAILABLE FOR WORK]</div>
+            <h1>Hi, I'm <span class="highlight">Rohit Zade</span></h1>
+            <h3 class="typewriter-container">&gt; <span id="typewriter"></span><span class="cursor">&nbsp;</span></h3>
+            <p>Crafting clean, responsive, and functional web applications.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn">&gt; View Projects</a>
+                <a href="Rohit_zade_cv.pdf" target="_blank" class="btn btn-outline">&gt; Resume.pdf</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <div class="retro-frame">
+                <img src="pic.jpg" alt="Rohit Zade" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">&lt;About /&gt;</h2>
+            <div class="about-card">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">bio.txt</span>
+                </div>
+                <div class="about-content">
+                    <p>I am a Full Stack Developer passionate about building scalable, user-centric web applications with clean and maintainable code. I hold a Master of Computer Applications (MCA) from PIRENS IBMA, Savitribai Phule Pune University, and a Bachelor of Computer Applications (BCA) from Kamla Nehru Mahavidyalaya Nagpur University (RTMNU).</p>
+                    <br>
+                    <p><strong class="highlight">Skills:</strong> Java, React.js, JavaScript (ES6+), HTML5/CSS3, Tailwind CSS, Redux, REST APIs, Git/GitHub.</p>
+                    <p><strong class="highlight">Hobbies:</strong> Photography, Gaming, and Chess.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-retro">
+        <div class="container">
+            <h2 class="section-title">&lt;Projects /&gt;</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">calc_app.exe</span>
+                    </div>
+                    <div class="project-img-container">
+                        <img src="calc.png" alt="Calculator App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Calculator App</h3>
+                        <p>A functional arithmetic tool built with vanilla JavaScript[cite: 1]. Features clean inputs and key binding operations.</p>
+                        <div class="project-links">
+                            <button class="btn-sm" onclick="openModal('Calculator App', 'A functional arithmetic tool built with vanilla JavaScript handling core mathematical operations with dynamic updates.')">&gt; Details</button>
+                            <a href="https://github.com/Rohitz24/calculator-app" target="_blank" class="btn-sm github-btn">&gt; GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">todo_app.exe</span>
+                    </div>
+                    <div class="project-img-container">
+                        <img src="todo.png" alt="To-do List App">
+                    </div>
+                    <div class="project-info">
+                        <h3>To-do List App</h3>
+                        <p>A productivity application designed to manage daily tasks efficiently with interactive progress tracking[cite: 1].</p>
+                        <div class="project-links">
+                            <button class="btn-sm" onclick="openModal('To-do List App', 'A productivity application designed to manage daily tasks efficiently with dynamic list updates and status counters.')">&gt; Details</button>
+                            <a href="https://github.com/Rohitz24/to-do-list-app" target="_blank" class="btn-sm github-btn">&gt; GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">weather_app.exe</span>
+                    </div>
+                    <div class="project-img-container">
+                        <img src="weather.png" alt="Weather App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>Real-time weather tracking application fetching live global metrics and 5-day forecasts via OpenWeather API[cite: 1].</p>
+                        <div class="project-links">
+                            <button class="btn-sm" onclick="openModal('Weather App', 'Real-time weather tracking application fetching live global data, humidity, wind speeds, and extended forecasts.')">&gt; Details</button>
+                            <a href="https://github.com/Rohitz24/weatherapp" target="_blank" class="btn-sm github-btn">&gt; GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">&lt;Contact /&gt;</h2>
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xaqrvorv" method="POST">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">send_message.sh</span>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="name">&gt; NAME:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                    <small class="error-msg">[!] Name is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">&gt; EMAIL:</label>
+                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                    <small class="error-msg">[!] Valid email is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="subject">&gt; SUBJECT:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+                    <small class="error-msg">[!] Subject is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="message">&gt; MESSAGE:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                    <small class="error-msg">[!] Message cannot be empty</small>
+                </div>
+                <button type="submit" id="submitBtn" class="btn">&gt; TRANSMIT MESSAGE</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+```
+
+    <footer>
+        <p>&copy; 2026 Rohit Zade. All rights reserved. | Built with retro simplicity.</p>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title" id="modalTitle">Project Details</span>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
