@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Rohit Zade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">&gt; Admin_Control_Panel_</div>
+        <div class="nav-right">
+            <button id="themeToggleBtn" class="btn-sm theme-btn">&gt; [THEME: NIGHT]</button>
+            <a href="index.html" class="btn-sm">&gt; Return to Site</a>
+            <button id="logoutBtn" class="btn-sm btn-outline" style="display: none;">[LOGOUT]</button>
+        </div>
+    </nav>
+
+    <div class="container section" style="padding-top: 120px;">
+        <!-- Alert Toast -->
+        <div id="adminToast" class="toast"></div>
+
+        <!-- Authentication View -->
+        <div id="loginView" class="contact-form">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">auth_gatekeeper.sh</span>
+            </div>
+            <form id="loginForm" class="form-body">
+                <div class="form-group">
+                    <label for="username">&gt; USERNAME:</label>
+                    <input type="text" id="username" placeholder="admin" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">&gt; PASSWORD:</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn">&gt; AUTHENTICATE</button>
+            </form>
+        </div>
+
+        <!-- Admin Control Dashboard View -->
+        <div id="dashboardView" style="display: none;">
+            
+            <!-- Update Profile Section -->
+            <div class="about-card" style="margin-bottom: 40px;">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">edit_profile_data.json</span>
+                </div>
+                <form id="profileForm" class="form-body">
+                    <div class="form-group">
+                        <label for="statusInput">&gt; HERO STATUS BADGE:</label>
+                        <input type="text" id="statusInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bioInput">&gt; ABOUT ME PARAGRAPH:</label>
+                        <textarea id="bioInput" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skillsInput">&gt; SKILLS (Comma Separated):</label>
+                        <input type="text" id="skillsInput" required>
+                    </div>
+                    <button type="submit" class="btn">&gt; SAVE PROFILE DATA</button>
+                </form>
+            </div>
+
+            <!-- Manage Projects Section -->
+            <div class="about-card">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">manage_projects.db</span>
+                </div>
+                <div class="form-body">
+                    <h3 style="color: var(--accent-color); margin-bottom: 15px;" id="projectFormTitle">&gt; Add New Project</h3>
+                    
+                    <form id="projectForm">
+                        <input type="hidden" id="projectId">
+                        <div class="form-group">
+                            <label for="projTitle">&gt; TITLE:</label>
+                            <input type="text" id="projTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projExe">&gt; EXECUTABLE/FILE NAME (e.g., calc_app.exe):</label>
+                            <input type="text" id="projExe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projImg">&gt; IMAGE URL / PATH:</label>
+                            <input type="text" id="projImg" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projDesc">&gt; SHORT DESCRIPTION:</label>
+                            <textarea id="projDesc" rows="2" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="projDetails">&gt; MODAL DETAILED DESCRIPTION:</label>
+                            <textarea id="projDetails" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="projGithub">&gt; GITHUB REPOSITORY URL:</label>
+                            <input type="url" id="projGithub" required>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button type="submit" id="saveProjBtn" class="btn">&gt; ADD PROJECT</button>
+                            <button type="button" id="cancelEditBtn" class="btn btn-outline" style="display: none;">CANCEL</button>
+                        </div>
+                    </form>
+
+                    <hr style="border-color: var(--border-color); margin: 30px 0;">
+
+                    <h3 style="color: var(--accent-color); margin-bottom: 15px;">&gt; Existing Projects</h3>
+                    <div id="adminProjectsList" class="admin-projects-list">
+                        <!-- Project rows rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
